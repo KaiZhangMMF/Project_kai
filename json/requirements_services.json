@@ -1,0 +1,48 @@
+{
+	"ID": 0,
+	"ServiceName": "bootstrap",
+	"ServiceVersion": "5.5.5",
+	"ActiveStatus": "",
+	"RunningStatus": "",
+	"ServiceStatus": ""
+},
+{
+	"ID": 1,
+	"ServiceName": "chronyd",
+	"ServiceVersion": "4.4.4",
+	"ActiveStatus": "",
+	"RunningStatus": "",
+	"ServiceStatus": ""
+},
+{
+	"ID": 2,
+	"ServiceName": "docker",
+	"ServiceVersion": "1.1.1",
+	"ActiveStatus": "",
+	"RunningStatus": "",
+	"ServiceStatus": ""
+},
+{
+	"ID": 3,
+	"ServiceName": "firewalld",
+	"ServiceVersion": "3.3.3",
+	"ActiveStatus": "",
+	"RunningStatus": "",
+	"ServiceStatus": ""
+},
+{
+	"ID": 4,
+	"ServiceName": "sshd",
+	"ServiceVersion": "2.2.2",
+	"ActiveStatus": "",
+	"RunningStatus": "",
+	"ServiceStatus": ""
+},
+{
+	"ID": 5,
+	"ServiceName": "docker-bootstrap",
+	"ServiceVersion": "6.6.6",
+	"ActiveStatus": "",
+	"RunningStatus": "",
+	"ServiceStatus": ""
+}

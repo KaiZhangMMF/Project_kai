@@ -1,0 +1,58 @@
+{{template "header" .}}
+<title>Service List</title>
+{{template "navbar" .}}
+</head>
+<div>
+    <form method="POST" action="/service" target="iframeservice">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Service Name</th>
+                    <th>Service Version</th>
+                </tr>
+            </thead>
+            <tbody id="service_tbody">
+                {{if .serviceExist}} {{range $key, $val := .services}}
+                <tr id="service_row2">
+                    <td><input style="width: 98%;" type="text" name="service_name" placeholder="Input Service Name" value="{{$key}}" /></td>
+                    <td><input style="width: 98%;" name="service_version" type="text" placeholder="Input Service Version" value="{{$val.ServiceVersion}}" /></td>
+                </tr>
+                {{end}} {{else}}
+                <tr id="service_row1">
+                    <td><input style="width: 98%;" type="text" name="service_name" placeholder="Input Service Name" /></td>
+                    <td><input style="width: 98%;" name="service_version" type="text" placeholder="Input Service Version" /></td>
+                </tr>
+                <tr id="service_row2">
+                    <td><input style="width: 98%;" type="text" name="service_name" placeholder="Input Service Name" /></td>
+                    <td><input style="width: 98%;" name="service_version" type="text" placeholder="Input Service Version" /></td>
+                </tr>
+                {{end}}
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td><input type="button" id="addservice" value="Add Service" /></td>
+                    <td><input type="submit" name="exportall" value="Export All" /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Last Modified: 2019-06-27 15:04:05</td>
+                </tr>
+            </tfoot>
+        </table>
+    </form>
+    <iframe id="iframeservice" name="iframeservice" style="display:none;"></iframe>
+    <script>
+        $("#addservice").click(function() {
+            //var $targetTbody = $("#service_tbody");
+            //var $tr = $targetTbody.children("tr:last");
+            //$tr.after($tr[0].outerHTML);
+            var new_tr = $("#service_row2").html();
+            $("#service_tbody").append("<tr>" + new_tr + "</tr>");
+        })
+    </script>
+</div>
+
+
+
+</html>
