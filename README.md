@@ -20,4 +20,4 @@
 >> sshPort = "22"  
 >> sshType = "password"  
 > 5. then you can run chomod 766 webconsole_sma_MMF  && ./webconsole_sma_MMF to start the server
-> 6. enjoy of using this machine
+> 6. enjoy of using this script
